@@ -1,4 +1,10 @@
-{
-  "builds": [{ "src": "mockdocs/**", "use": "@vercel/static" }],
-  "routes": [{ "src": "/(.*)", "dest": "/mockdocs/$1" }]
-}   
+   {
+     "builds": [
+       { "src": "mockdocs/**", "use": "@vercel/static" },
+       { "src": "index.html", "use": "@vercel/static" }
+     ],
+     "routes": [
+       { "src": "/mockdocs/(.*)", "dest": "/mockdocs/$1" },
+       { "src": "/(.*)", "dest": "/mockdocs/$1" }
+     ]
+   }
